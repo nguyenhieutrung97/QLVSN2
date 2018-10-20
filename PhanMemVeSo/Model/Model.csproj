@@ -50,7 +50,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Dao\DaiLyDao.cs" />
+    <Compile Include="Bus\DaiLyBus.cs" />
     <Compile Include="EFModels\DaiLy.cs">
       <DependentUpon>PhanPhoiVeSo.tt</DependentUpon>
     </Compile>
@@ -90,7 +90,9 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="ViewModels\DotPhatHanh.cs" />
     <Compile Include="ViewModels\ListPhieuDangKyVM.cs" />
+    <Compile Include="ViewModels\PhieuCongNo.cs" />
     <Compile Include="ViewModels\PhieuDangKyVM.cs" />
+    <Compile Include="ViewModels\KetQuaXoSoVM.cs" />
     <Compile Include="ViewModels\PhieuPhatHanhVM.cs" />
   </ItemGroup>
   <ItemGroup>

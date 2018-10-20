@@ -5,7 +5,7 @@ using System.Web;
 using System.Web.Mvc;
 using Model.EFModels;
 using Model.ViewModels;
-using Model.Dao;
+using Model.Bus;
 using System.Globalization;
 using System.Net;
 using System.Data.Entity;
@@ -92,8 +92,8 @@ namespace PhanMemVeSo.Areas.Admin.Controllers
             {
                 PhieuPhatHanhVM phieuPhatHanhVM = new PhieuPhatHanhVM();
                 phieuPhatHanhVM.DaiLyId = item;
-                DaiLyDao daiLyDao = new DaiLyDao();
-                phieuPhatHanhVM.SLPhat=daiLyDao.TinhToanSLPhatTheoDaiLy(loaiVeSoId,item, ngayPhat   );
+                DaiLyBus daiLyBus = new DaiLyBus();
+                phieuPhatHanhVM.SLPhat=daiLyBus.TinhToanSLPhatTheoDaiLy(loaiVeSoId,item, ngayPhat   );
                 phieuPhatHanhVM.TenDaiLy = db.DaiLies.Where(m => m.DaiLyId == item).Select(m => m.TenDaiLy).SingleOrDefault();
                 listPhieuPhatHanh.Add(phieuPhatHanhVM);
             }

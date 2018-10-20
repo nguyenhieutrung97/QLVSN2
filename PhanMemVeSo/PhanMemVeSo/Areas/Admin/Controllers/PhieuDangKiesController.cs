@@ -120,6 +120,7 @@ namespace PhanMemVeSo.Areas.Admin.Controllers
                 return HttpNotFound();
             }
             ViewBag.DaiLyId = new SelectList(db.DaiLies, "DaiLyId", "TenDaiLy", phieuDangKy.DaiLyId);
+            ViewBag.LoaiVeSoId = new SelectList(db.LoaiVeSoes, "LoaiVeSoId", "TenTinh", phieuDangKy.LoaiVeSoId);
             return View(phieuDangKy);
         }
 
@@ -128,7 +129,7 @@ namespace PhanMemVeSo.Areas.Admin.Controllers
         // more details see https://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public ActionResult Edit([Bind(Include = "PhieuDangKyId,DaiLyId,NgayDangKy,SLDangKy")] PhieuDangKy phieuDangKy)
+        public ActionResult Edit([Bind(Include = "PhieuDangKyId,DaiLyId,NgayDangKy,SLDangKy,LoaiVeSoId")] PhieuDangKy phieuDangKy)
         {
             if (ModelState.IsValid)
             {

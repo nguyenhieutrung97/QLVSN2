@@ -12,6 +12,7 @@
     <EntitySetMapping Name="Giais">
       <EntityTypeMapping TypeName="PhanPhoiVeSoModel.Giai">
         <MappingFragment StoreEntitySet="Giai">
+          <ScalarProperty Name="SLSoTrung" ColumnName="SLSoTrung" />
           <ScalarProperty Name="GiaiId" ColumnName="GiaiId" />
           <ScalarProperty Name="TenGiai" ColumnName="TenGiai" />
           <ScalarProperty Name="TienThuong" ColumnName="TienThuong" />

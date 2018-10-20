@@ -22,7 +22,8 @@ namespace Model.EFModels
     
         public int GiaiId { get; set; }
         public string TenGiai { get; set; }
-        public Nullable<decimal> TienThuong { get; set; }
+        public decimal TienThuong { get; set; }
+        public int SLSoTrung { get; set; }
     
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
         public virtual ICollection<KetQuaXoSo> KetQuaXoSoes { get; set; }

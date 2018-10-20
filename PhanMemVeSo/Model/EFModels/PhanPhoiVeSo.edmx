@@ -4,7 +4,7 @@
   <edmx:Runtime>
     <!-- SSDL content -->
     <edmx:StorageModels>
-      <Schema Namespace="PhanPhoiVeSoModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+    <Schema Namespace="PhanPhoiVeSoModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
         <EntityType Name="DaiLy">
           <Key>
             <PropertyRef Name="DaiLyId" />
@@ -17,8 +17,9 @@
             <PropertyRef Name="GiaiId" />
           </Key>
           <Property Name="GiaiId" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
-          <Property Name="TenGiai" Type="nvarchar" MaxLength="120" />
-          <Property Name="TienThuong" Type="decimal" Precision="18" Scale="0" />
+          <Property Name="TenGiai" Type="nvarchar" MaxLength="120" Nullable="false" />
+          <Property Name="TienThuong" Type="decimal" Precision="18" Scale="0" Nullable="false" />
+          <Property Name="SLSoTrung" Type="int" Nullable="false" />
         </EntityType>
         <EntityType Name="KetQuaXoSo">
           <Key>
@@ -188,8 +189,7 @@
             <End Role="PhieuThu" EntitySet="PhieuThu" />
           </AssociationSet>
         </EntityContainer>
-      </Schema>
-    </edmx:StorageModels>
+      </Schema></edmx:StorageModels>
     <!-- CSDL content -->
     <edmx:ConceptualModels>
       <Schema Namespace="PhanPhoiVeSoModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
@@ -208,9 +208,10 @@
             <PropertyRef Name="GiaiId" />
           </Key>
           <Property Name="GiaiId" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
-          <Property Name="TenGiai" Type="String" MaxLength="120" FixedLength="false" Unicode="true" />
-          <Property Name="TienThuong" Type="Decimal" Precision="18" Scale="0" />
+          <Property Name="TenGiai" Type="String" MaxLength="120" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="TienThuong" Type="Decimal" Precision="18" Scale="0" Nullable="false" />
           <NavigationProperty Name="KetQuaXoSoes" Relationship="Self.FK__KetQuaXoS__GiaiI__45F365D3" FromRole="Giai" ToRole="KetQuaXoSo" />
+          <Property Name="SLSoTrung" Type="Int32" Nullable="false" />
         </EntityType>
         <EntityType Name="KetQuaXoSo">
           <Key>
@@ -407,6 +408,7 @@
           <EntitySetMapping Name="Giais">
             <EntityTypeMapping TypeName="PhanPhoiVeSoModel.Giai">
               <MappingFragment StoreEntitySet="Giai">
+                <ScalarProperty Name="SLSoTrung" ColumnName="SLSoTrung" />
                 <ScalarProperty Name="GiaiId" ColumnName="GiaiId" />
                 <ScalarProperty Name="TenGiai" ColumnName="TenGiai" />
                 <ScalarProperty Name="TienThuong" ColumnName="TienThuong" />

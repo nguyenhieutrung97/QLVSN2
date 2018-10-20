@@ -25,25 +25,29 @@
 <div class="content mt-3">
     <div class="col-sm-12">
         <div class="alert  alert-success alert-dismissible fade show" role="alert">
-             Phần mềm<span class="badge badge-pill badge-success">Quản lý phát hành vé số</span>
+            Phần mềm<span class="badge badge-pill badge-success">Quản lý phát hành vé số</span>
             <button type="button" class="close" data-dismiss="alert" aria-label="Close">
                 <span aria-hidden="true">&times;</span>
             </button>
         </div>
     </div>
     <a href="@Url.Action("Index","DaiLys")">
+
         <div class="col-sm-12 col-lg-6">
             <div class="card text-white bg-flat-color-1">
                 <div class="card-body pb-0">
+                    <i class="fa fa-handshake-o"></i>
                     Quản Lý Đại Lý
                 </div>
             </div>
         </div>
     </a>
     <a href="@Url.Action("Index","LoaiVeSoes")">
+
         <div class="col-sm-12 col-lg-6">
             <div class="card text-white bg-flat-color-1">
                 <div class="card-body pb-0">
+                    <i class="fa fa-bars"></i>
                     Quản Lý Loại Vé Số
                 </div>
             </div>
@@ -51,9 +55,11 @@
     </a>
 
     <a href="@Url.Action("Index","PhieuDangKies")">
+
         <div class="col-sm-12 col-lg-6">
             <div class="card text-white bg-flat-color-1">
                 <div class="card-body pb-0">
+                    <i class="fa fa-id-card-o "></i>
                     Quản Lý Phiếu Đăng Ký
                 </div>
             </div>
@@ -61,15 +67,49 @@
     </a>
 
     <a href="@Url.Action("Index","DotPhatHanhs")">
+
         <div class="col-sm-12 col-lg-6">
             <div class="card text-white bg-flat-color-1">
                 <div class="card-body pb-0">
+                    <i class="fa fa-university "></i>
                     Quản Lý Đợt Phát Hành
                 </div>
             </div>
         </div>
     </a>
+    <a href="@Url.Action("Index","QuanLySoTrung")">
 
+        <div class="col-sm-12 col-lg-6">
+            <div class="card text-white bg-flat-color-1">
+                <div class="card-body pb-0">
+                    <i class="fa fa-ticket"></i>
+                    Quản Lý Số Trúng
+                </div>
+            </div>
+        </div>
+    </a>
+    <a href="@Url.Action("Index","PhieuThus")">
+
+        <div class="col-sm-12 col-lg-6">
+            <div class="card text-white bg-flat-color-1">
+                <div class="card-body pb-0">
+                    <i class="fa fa-file-text"></i>
+                    Quản Lý phiếu thu
+                </div>
+            </div>
+        </div>
+    </a>
+    <a href="@Url.Action("Index","QuanLyCongNo")">
+
+        <div class="col-sm-12 col-lg-6">
+            <div class="card text-white bg-flat-color-1">
+                <div class="card-body pb-0">
+                    <i class="fa fa-money"></i>
+                    Quản Lý công nợ
+                </div>
+            </div>
+        </div>
+    </a>
 </div> <!-- .content -->
 
 @section Plugin1{

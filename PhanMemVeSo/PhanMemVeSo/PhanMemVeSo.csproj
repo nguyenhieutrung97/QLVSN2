@@ -153,6 +153,9 @@
     <Compile Include="Areas\Admin\Controllers\DotPhatHanhsController.cs" />
     <Compile Include="Areas\Admin\Controllers\LoaiVeSoesController.cs" />
     <Compile Include="Areas\Admin\Controllers\PhieuDangKiesController.cs" />
+    <Compile Include="Areas\Admin\Controllers\PhieuThusController.cs" />
+    <Compile Include="Areas\Admin\Controllers\QuanLyCongNoController.cs" />
+    <Compile Include="Areas\Admin\Controllers\QuanLySoTrungController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
@@ -1405,6 +1408,16 @@
     <Content Include="Areas\Admin\Views\PhieuDangKies\Edit.cshtml" />
     <Content Include="Areas\Admin\Views\PhieuDangKies\Index.cshtml" />
     <Content Include="Areas\Admin\Views\PhieuDangKies\findDateandTypeVeSo.cshtml" />
+    <Content Include="Areas\Admin\Views\QuanLySoTrung\QuanLySoTrung.cshtml" />
+    <Content Include="Areas\Admin\Views\QuanLySoTrung\Index.cshtml" />
+    <Content Include="Areas\Admin\Views\QuanLySoTrung\findDateandTypeVeSo.cshtml" />
+    <Content Include="Areas\Admin\Views\QuanLySoTrung\Create.cshtml" />
+    <Content Include="Areas\Admin\Views\PhieuThus\Create.cshtml" />
+    <Content Include="Areas\Admin\Views\PhieuThus\Delete.cshtml" />
+    <Content Include="Areas\Admin\Views\PhieuThus\Details.cshtml" />
+    <Content Include="Areas\Admin\Views\PhieuThus\Edit.cshtml" />
+    <Content Include="Areas\Admin\Views\PhieuThus\Index.cshtml" />
+    <Content Include="Areas\Admin\Views\QuanLyCongNo\Index.cshtml" />
     <None Include="Scripts\jquery-3.3.1.intellisense.js" />
     <Content Include="Scripts\bootstrap.js" />
     <Content Include="Scripts\bootstrap.min.js" />

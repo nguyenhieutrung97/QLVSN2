@@ -37,8 +37,9 @@ create table PhieuPhatHanh
 create table Giai
 (
 	GiaiId int IDENTITY(1,1) PRIMARY KEY,
-	TenGiai nvarchar(120),
-	TienThuong decimal
+	TenGiai nvarchar(120) not null,
+	TienThuong decimal not null,
+	SLSoTrung int not null
 )
 create table KetQuaXoSo
 (
@@ -100,4 +101,36 @@ VALUES  (1,3,'2018/11/02',80,80),
 		(5,3,'2018/10/26',85,85),
 		(6,3,'2018/10/27',120,120)
 
-		select * from PhieuDangKy
+Insert into Giai(TenGiai,TienThuong,SLSoTrung)
+Values (N'Giải đặc biệt',2000000000,1),
+	   (N'Giải nhất',30000000,1),
+	   (N'Giải nhì',15000000,1),
+	   (N'Giải ba',10000000,2),
+	   (N'Giải tư',3000000,7),
+	   (N'Giải năm',1000000,1),
+	   (N'Giải sáu',400000,3),
+	   (N'Giải bảy',200000,1),
+	   (N'Giải tám',100000,1)
+
+Insert into KetQuaXoSo(LoaiVeSoId,NgayXoSo,GiaiId,SoTrung)
+Values (1,'2018/10/19',1,'795155'),
+	   (1,'2018/10/19',2,'21386'),
+	   (1,'2018/10/19',3,'89007'),
+	   (1,'2018/10/19',4,'62505'),
+	   (1,'2018/10/19',4,'69499'),
+	   (1,'2018/10/19',5,'20777'),
+	   (1,'2018/10/19',5,'36871'),
+	   (1,'2018/10/19',5,'69365'),
+	   (1,'2018/10/19',5,'72070'),
+	   (1,'2018/10/19',5,'73168'),
+	   (1,'2018/10/19',5,'15604'),
+	   (1,'2018/10/19',5,'70633'),
+	   (1,'2018/10/19',6,'6998'),
+	   (1,'2018/10/19',7,'2669'),
+	   (1,'2018/10/19',7,'1387'),
+	   (1,'2018/10/19',7,'2841'),
+	   (1,'2018/10/19',8,'093'),
+	   (1,'2018/10/19',9,'38'),
+	   (1,'2018/10/19',9,'21386')
+
+	   select * from PhieuPhatHanh

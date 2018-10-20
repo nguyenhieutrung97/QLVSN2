@@ -15,9 +15,10 @@
       <PropertyRef Name="GiaiId" />
     </Key>
     <Property Name="GiaiId" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
-    <Property Name="TenGiai" Type="String" MaxLength="120" FixedLength="false" Unicode="true" />
-    <Property Name="TienThuong" Type="Decimal" Precision="18" Scale="0" />
+    <Property Name="TenGiai" Type="String" MaxLength="120" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="TienThuong" Type="Decimal" Precision="18" Scale="0" Nullable="false" />
     <NavigationProperty Name="KetQuaXoSoes" Relationship="Self.FK__KetQuaXoS__GiaiI__45F365D3" FromRole="Giai" ToRole="KetQuaXoSo" />
+    <Property Name="SLSoTrung" Type="Int32" Nullable="false" />
   </EntityType>
   <EntityType Name="KetQuaXoSo">
     <Key>
